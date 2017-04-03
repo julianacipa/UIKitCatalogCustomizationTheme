@@ -18,7 +18,7 @@ enum Theme: Int {
         case .normal:
             return UIColor(red: 87.0/255.0, green: 188.0/255.0, blue: 95.0/255.0, alpha: 1.0)
         case .dark:
-            return UIColor(red: 242.0/255.0, green: 101.0/255.0, blue: 34.0/255.0, alpha: 1.0)
+            return UIColor.unicornGreen()
         case .graphical:
             return UIColor(red: 10.0/255.0, green: 10.0/255.0, blue: 10.0/255.0, alpha: 1.0)
         }
@@ -47,7 +47,7 @@ enum Theme: Int {
         case .normal, .graphical:
             return UIColor(white: 0.9, alpha: 1.0)
         case .dark:
-            return UIColor(white: 0.8, alpha: 1.0)
+            return UIColor.unicornPink()
         }
     }
     
@@ -56,7 +56,7 @@ enum Theme: Int {
         case .normal:
             return UIColor(red: 242.0/255.0, green: 101.0/255.0, blue: 34.0/255.0, alpha: 1.0)
         case .dark:
-            return UIColor(red: 34.0/255.0, green: 128.0/255.0, blue: 66.0/255.0, alpha: 1.0)
+            return UIColor.unicornPink()
         case .graphical:
             return UIColor(red: 140.0/255.0, green: 50.0/255.0, blue: 48.0/255.0, alpha: 1.0)
         }
@@ -85,11 +85,15 @@ struct ThemeManager {
         sharedApplication.delegate?.window??.tintColor = theme.mainColor
         
         UINavigationBar.appearance().barStyle = theme.barStyle
+        //UINavigationBar.appearance().tintColor = theme.secondaryColor
+        UINavigationBar.appearance().backgroundColor = theme.secondaryColor
         //UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, forBarMetrics: .default)
         UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, for: .default)
         
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
+        
+        UITableView.appearance().sectionIndexBackgroundColor = theme.secondaryColor
         
         //
         UITabBar.appearance().barStyle = theme.barStyle

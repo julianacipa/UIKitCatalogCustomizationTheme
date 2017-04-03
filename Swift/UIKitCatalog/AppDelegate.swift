@@ -22,7 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UISplitViewControllerDelegat
         splitViewController.delegate = self
         splitViewController.preferredDisplayMode = .allVisible
         
-        let theme = Theme.normal
+        let theme = Theme.dark
         
         ThemeManager.applyTheme(theme: theme)
 

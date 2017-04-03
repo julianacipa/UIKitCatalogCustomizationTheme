@@ -42,6 +42,7 @@
 		B51AD3F91B1A8A6A00083F63 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B51AD3F71B1A8A6A00083F63 /* Search.storyboard */; };
 		B5C300DD1B0FC458003B05A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C300DC1B0FC458003B05A0 /* LaunchScreen.storyboard */; };
 		B983B5FD1E5B0D7E009FDE6F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983B5FC1E5B0D7E009FDE6F /* Theme.swift */; };
+		B9BEBEE11E8BDE4F0071AD0D /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		B51AD3F81B1A8A6A00083F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Search.storyboard; sourceTree = "<group>"; };
 		B5C300DC1B0FC458003B05A0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B983B5FC1E5B0D7E009FDE6F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				2200541C18BC54E8002A6E8B /* AppDelegate.swift */,
+				B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */,
 				221D43D318BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift */,
 				B5C300DC1B0FC458003B05A0 /* LaunchScreen.storyboard */,
 				3E5C08501974991E00969DD7 /* Main.storyboard */,
@@ -227,6 +230,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UIKitCatalog" */;
 			buildPhases = (
+				B9BEBEDF1E8BC9120071AD0D /* ShellScript */,
 				228DB9EF18BC53F1002BA12A /* Sources */,
 				228DB9F018BC53F1002BA12A /* Frameworks */,
 				228DB9F118BC53F1002BA12A /* Resources */,
@@ -289,6 +293,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B9BEBEDF1E8BC9120071AD0D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Your file is being downloaded at ${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip\"\necho \"Your file is being downloaded at ${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app/ios-style-data.zip\"\ncurl -o ${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip https://assets.brand.ai/buildit/design-system-demo/ios-style-data.zip?key=SyWmWBPc\necho \"Your file is downloaded to ${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip\"\nunzip -o \"${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip\" -d \"${PROJECT_DIR}/${PRODUCT_NAME}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		228DB9EF18BC53F1002BA12A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -303,6 +323,7 @@
 				2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */,
 				3E6AE856196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift in Sources */,
 				2200544A18BC54F5002A6E8B /* WebViewController.swift in Sources */,
+				B9BEBEE11E8BDE4F0071AD0D /* BrandColors.swift in Sources */,
 				2200542018BC54E8002A6E8B /* AppDelegate.swift in Sources */,
 				2200541F18BC54E8002A6E8B /* AlertControllerViewController.swift in Sources */,
 				2200542C18BC54EC002A6E8B /* DefaultToolbarViewController.swift in Sources */,
