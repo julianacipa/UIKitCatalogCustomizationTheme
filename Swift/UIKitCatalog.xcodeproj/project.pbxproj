@@ -43,6 +43,8 @@
 		B5C300DD1B0FC458003B05A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C300DC1B0FC458003B05A0 /* LaunchScreen.storyboard */; };
 		B983B5FD1E5B0D7E009FDE6F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B983B5FC1E5B0D7E009FDE6F /* Theme.swift */; };
 		B9BEBEE11E8BDE4F0071AD0D /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */; };
+		B9BEBEE71E927CB60071AD0D /* BrandTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEBEE61E927CB60071AD0D /* BrandTypography.swift */; };
+		B9BEBEEC1E92800D0071AD0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BEBEEB1E92800D0071AD0D /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,10 @@
 		B5C300DC1B0FC458003B05A0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B983B5FC1E5B0D7E009FDE6F /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandColors.swift; sourceTree = "<group>"; };
+		B9BEBEE61E927CB60071AD0D /* BrandTypography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTypography.swift; sourceTree = "<group>"; };
+		B9BEBEEB1E92800D0071AD0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B9BEBEF11E9282730071AD0D /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		B9BEBEF21E92860A0071AD0D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9BEBEEC1E92800D0071AD0D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +111,7 @@
 				3E5C084A19748EAA00969DD7 /* README.md */,
 				228DB9F518BC53F1002BA12A /* UIKitCatalog */,
 				228DB9F418BC53F1002BA12A /* Products */,
+				B9BEBEEA1E92800D0071AD0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,9 +137,11 @@
 		228DB9F618BC53F1002BA12A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B9BEBEF11E9282730071AD0D /* prefix.pch */,
 				2200542E18BC54F5002A6E8B /* Localizable.strings */,
 				228DB9F718BC53F1002BA12A /* UIKitCatalog-Info.plist */,
 				228DB9F818BC53F1002BA12A /* InfoPlist.strings */,
+				B9BEBEF21E92860A0071AD0D /* Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -185,6 +195,7 @@
 			children = (
 				2200541C18BC54E8002A6E8B /* AppDelegate.swift */,
 				B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */,
+				B9BEBEE61E927CB60071AD0D /* BrandTypography.swift */,
 				221D43D318BF15EF00B9E8C9 /* UIColor+ApplicationSpecific.swift */,
 				B5C300DC1B0FC458003B05A0 /* LaunchScreen.storyboard */,
 				3E5C08501974991E00969DD7 /* Main.storyboard */,
@@ -223,6 +234,14 @@
 			name = "Base View Controllers";
 			sourceTree = "<group>";
 		};
+		B9BEBEEA1E92800D0071AD0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9BEBEEB1E92800D0071AD0D /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -230,10 +249,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 228DBA0B18BC53F1002BA12A /* Build configuration list for PBXNativeTarget "UIKitCatalog" */;
 			buildPhases = (
-				B9BEBEDF1E8BC9120071AD0D /* ShellScript */,
 				228DB9EF18BC53F1002BA12A /* Sources */,
 				228DB9F018BC53F1002BA12A /* Frameworks */,
 				228DB9F118BC53F1002BA12A /* Resources */,
+				B9BEBEF31E92877A0071AD0D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -294,7 +313,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B9BEBEDF1E8BC9120071AD0D /* ShellScript */ = {
+		B9BEBEF31E92877A0071AD0D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,6 +341,7 @@
 				2200544318BC54F5002A6E8B /* SliderViewController.swift in Sources */,
 				2200544218BC54F5002A6E8B /* SegmentedControlViewController.swift in Sources */,
 				3E6AE856196B3B490062A3E1 /* SearchPresentOverNavigationBarViewController.swift in Sources */,
+				B9BEBEE71E927CB60071AD0D /* BrandTypography.swift in Sources */,
 				2200544A18BC54F5002A6E8B /* WebViewController.swift in Sources */,
 				B9BEBEE11E8BDE4F0071AD0D /* BrandColors.swift in Sources */,
 				2200542018BC54E8002A6E8B /* AppDelegate.swift in Sources */,
@@ -467,11 +487,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/UIKitCatalog/UIKitCatalog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -481,11 +504,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/UIKitCatalog/UIKitCatalog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
 			};
