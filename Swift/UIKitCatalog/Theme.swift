@@ -90,6 +90,15 @@ struct ThemeManager {
         //UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, forBarMetrics: .default)
         UINavigationBar.appearance().setBackgroundImage(theme.navigationBackgroundImage, for: .default)
         
+        let font = UIFont(name: headingLevel1.fontName, size: CGFloat(headingLevel1.fontSize))
+        
+        if (font != nil) {
+            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: font!,
+                                                                NSForegroundColorAttributeName: headingLevel1.textColor]
+        } else {
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: headingLevel1.textColor]
+        }
+        
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "backArrow")
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = UIImage(named: "backArrowMaskFixed")
         

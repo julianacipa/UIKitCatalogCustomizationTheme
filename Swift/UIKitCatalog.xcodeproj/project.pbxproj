@@ -45,6 +45,7 @@
 		B9BEBEE11E8BDE4F0071AD0D /* BrandColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEBEE01E8BDE4F0071AD0D /* BrandColors.swift */; };
 		B9BEBEE71E927CB60071AD0D /* BrandTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEBEE61E927CB60071AD0D /* BrandTypography.swift */; };
 		B9BEBEEC1E92800D0071AD0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BEBEEB1E92800D0071AD0D /* UIKit.framework */; };
+		B9BEBEFC1E928ABF0071AD0D /* CustomisedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEBEFB1E928ABF0071AD0D /* CustomisedTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		B9BEBEEB1E92800D0071AD0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B9BEBEF11E9282730071AD0D /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		B9BEBEF21E92860A0071AD0D /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		B9BEBEFB1E928ABF0071AD0D /* CustomisedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomisedTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 		3E1DA7601931CC99000114A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B9BEBEF41E9289590071AD0D /* TableViewAndCells */,
 				2200541A18BC54E8002A6E8B /* ActivityIndicatorViewController.swift */,
 				2200541B18BC54E8002A6E8B /* AlertControllerViewController.swift */,
 				2200542118BC54EC002A6E8B /* ButtonViewController.swift */,
@@ -240,6 +243,14 @@
 				B9BEBEEB1E92800D0071AD0D /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9BEBEF41E9289590071AD0D /* TableViewAndCells */ = {
+			isa = PBXGroup;
+			children = (
+				B9BEBEFB1E928ABF0071AD0D /* CustomisedTableViewController.swift */,
+			);
+			name = TableViewAndCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +371,7 @@
 				B983B5FD1E5B0D7E009FDE6F /* Theme.swift in Sources */,
 				2200544518BC54F5002A6E8B /* StepperViewController.swift in Sources */,
 				3E6AE850196B20240062A3E1 /* SearchControllerBaseViewController.swift in Sources */,
+				B9BEBEFC1E928ABF0071AD0D /* CustomisedTableViewController.swift in Sources */,
 				2200542818BC54EC002A6E8B /* CustomSearchBarViewController.swift in Sources */,
 				2200542918BC54EC002A6E8B /* CustomToolbarViewController.swift in Sources */,
 				2200542A18BC54EC002A6E8B /* DatePickerController.swift in Sources */,
@@ -495,6 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -512,7 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT)/Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
