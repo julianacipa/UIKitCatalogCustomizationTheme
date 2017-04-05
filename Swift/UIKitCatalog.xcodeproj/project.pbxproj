@@ -335,7 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "curl -o ${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip https://assets.brand.ai/buildit/design-system-demo/ios-style-data.zip?key=SyWmWBPc\nunzip -o \"${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip\" -d \"${PROJECT_DIR}/${PRODUCT_NAME}\"\n\ncurl -o ${PROJECT_DIR}/${PRODUCT_NAME}/logos.zip https://assets.brand.ai/buildit/design-system-demo/logos.zip?key=SyWmWBPc\nunzip -o \"${PROJECT_DIR}/${PRODUCT_NAME}/logos.zip\" -d \"${PROJECT_DIR}/${PRODUCT_NAME}\"\ncp -f \"${PROJECT_DIR}/${PRODUCT_NAME}/unicorn_inc.png\" \"${PROJECT_DIR}/${PRODUCT_NAME}/Images.xcassets/image_animal_1.imageset/image_animal_5.png\"";
+			shellScript = "echo \"Start to download styles file\"\ncurl -o ${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip https://assets.brand.ai/buildit/design-system-demo/ios-style-data.zip?key=SyWmWBPc\necho \"Start to unzip styles file\"\nunzip -o \"${PROJECT_DIR}/${PRODUCT_NAME}/ios-style-data.zip\" -d \"${PROJECT_DIR}/${PRODUCT_NAME}\"\necho \"Styles files are downloaded and unzipped\"\n\necho \"Start to download logos file\"\ncurl -o ${PROJECT_DIR}/${PRODUCT_NAME}/logos.zip https://assets.brand.ai/buildit/design-system-demo/logos.zip?key=SyWmWBPc\necho \"Start to unzip logos file\"\nunzip -o \"${PROJECT_DIR}/${PRODUCT_NAME}/logos.zip\" -d \"${PROJECT_DIR}/${PRODUCT_NAME}\"\necho \"Replace logo file\"\ncp -f \"${PROJECT_DIR}/${PRODUCT_NAME}/unicorn_inc.png\" \"${PROJECT_DIR}/${PRODUCT_NAME}/Images.xcassets/image_animal_1.imageset/image_animal_5.png\"\necho \"Done\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
